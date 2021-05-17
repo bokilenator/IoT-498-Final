@@ -16,8 +16,8 @@
     </div>
     <div class="row">
         <div class="col s6">
-          <div class="card small">
-            <div class="card-image">
+          <div class="card">
+            <div class="card-image large">
               <img src="{{url_for('static', filename='slippers.png')}}">
               <span class="card-title">Slippers</span>
             </div>
@@ -31,8 +31,8 @@
           </div>
         </div>
         <div class="col s6">
-          <div class="card small">
-            <div class="card-image">
+          <div class="card">
+            <div class="card-image large">
               <img src="{{url_for('static', filename='sneakers.png')}}">
               <span class="card-title">Sneakers</span>
             </div>
@@ -46,8 +46,8 @@
           </div>
         </div>
         <div class="col s6">
-          <div class="card small">
-            <div class="card-image">
+          <div class="card">
+            <div class="card-image large">
               <img src="{{url_for('static', filename='snowboots.png')}}">
               <span class="card-title">Snow Boots</span>
             </div>
@@ -61,8 +61,8 @@
           </div>
         </div>
         <div class="col s6">
-          <div class="card small">
-            <div class="card-image">
+          <div class="card">
+            <div class="card-image large">
               <img src="{{url_for('static', filename='rainboots.png')}}">
               <span class="card-title">Rain Boots</span>
             </div>
@@ -81,7 +81,7 @@
   <div id="camera" class="modal">
     <div class="modal-content row">
       <h4 id="replaceText">Replace Shoes</h4>
-      <img class="col s8 center offset-s2" src="{{ url_for('video_feed') }}">
+      <div id="replaceStream"></div>
     </div>
     <div class="modal-footer">
       <a href="#!" id="capture" class="modal-close waves-effect waves-green btn-flat">Capture</a>

@@ -4,7 +4,12 @@ $(function(){
 
 	$(document).ready(function(){
 		var elems = document.querySelectorAll('.modal');
-		options = {};
+		options = {
+			onOpenStart: function() {
+				console.log('starting stream');
+				$("#replaceStream").html("<img class='col s8 center offset-s2' src='/video_feed'></img>");
+			}
+		};
     	var instances = M.Modal.init(elems, options);
 	  });
 
