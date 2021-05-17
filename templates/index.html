@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+        <script src="static/index.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </head>
+<body class="container">
+    <div class="row">
+        <h1>IoT Shoe Rack</h1>
+        <a id="recommend" class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>Recommend Shoe</a>
+        <h4 id="recommendation"></h4>
+    </div>
+    <div class="row">
+        <div class="col s6">
+          <div class="card small">
+            <div class="card-image">
+              <img src="{{url_for('static', filename='slippers.png')}}">
+              <span class="card-title">Slippers</span>
+            </div>
+            <div class="card-content">
+              <p>These shoes are great to use for very hot weather.</p>
+            </div>
+            <div class="card-action">
+              <a class="modal-trigger" id="replace-slippers" href="#camera">Replace shoes</a>
+              <a id="lit-slippers" href="#!">Light shoes</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s6">
+          <div class="card small">
+            <div class="card-image">
+              <img src="{{url_for('static', filename='sneakers.png')}}">
+              <span class="card-title">Sneakers</span>
+            </div>
+            <div class="card-content">
+              <p>These are great all purpose shoes when the weather isn't too bad and it isn't too cold.</p>
+            </div>
+            <div class="card-action">
+              <a class="modal-trigger" id="replace-sneakers" href="#camera">Replace shoes</a>
+              <a id="lit-sneakers" href="#!">Light shoes</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s6">
+          <div class="card small">
+            <div class="card-image">
+              <img src="{{url_for('static', filename='snowboots.png')}}">
+              <span class="card-title">Snow Boots</span>
+            </div>
+            <div class="card-content">
+              <p>These are good shoes designed to be worn in the snow or in the cold.</p>
+            </div>
+            <div class="card-action">
+              <a class="modal-trigger" id="replace-snowboots" href="#camera">Replace shoes</a>
+              <a id="lit-snowboots" href="#!">Light shoes</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s6">
+          <div class="card small">
+            <div class="card-image">
+              <img src="{{url_for('static', filename='rainboots.png')}}">
+              <span class="card-title">Rain Boots</span>
+            </div>
+            <div class="card-content">
+              <p>These shoes are designed for rainy days to keep your feet dry.</p>
+            </div>
+            <div class="card-action">
+              <a class="modal-trigger" id="replace-rainboots" href="#camera">Replace shoes</a>
+              <a id="lit-rainboots" href="#!">Light shoes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <!-- Modal Structure -->
+  <div id="camera" class="modal">
+    <div class="modal-content row">
+      <h4 id="replaceText">Replace Shoes</h4>
+      <img class="col s8 center offset-s2" src="{{ url_for('video_feed') }}">
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id="capture" class="modal-close waves-effect waves-green btn-flat">Capture</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+    </div>
+  </div>
+</body>
+</html>
